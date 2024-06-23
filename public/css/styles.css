@@ -1,0 +1,166 @@
+/* General Styling */
+body {
+  background-color: #eeeeee;
+  color: #333;
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+}
+
+/* Centering and Layout */
+.centered {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+/* Headings */
+h2, h3 {
+  color: #444;
+  font-weight: bold;
+  text-align: center;
+}
+
+/* Forms and Inputs */
+input[type="text"],
+input[type="password"],
+input[type="date"],
+input[type="number"] {
+  border: 1px solid #171111;
+  border-radius: 4px;
+  padding: 10px;
+  margin: 5px 0;
+  width: 80%;
+  max-width: 300px;
+}
+
+/* Buttons */
+button {
+  border: 2px;
+  border-radius: 4px;
+  color: rgb(0, 0, 0);
+  cursor: pointer;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 5px 0;
+  transition-duration: 0.4s;
+  background-color: #509adb;
+  width: calc(80% + 20px);
+  max-width: 320px;
+}
+
+button:hover {
+  opacity: 0.9;
+}
+
+/* Specific Buttons */
+#register button,
+#login button {
+  background-color: #47abc9;
+  border: 2px solid #4f91b9;
+}
+
+#register button:hover,
+#login button:hover {
+  background-color: rgb(80, 128, 177);
+  color: #000000;
+}
+
+#add-expense-btn {
+  background-color: #2196F3;
+}
+
+#add-expense-btn:hover {
+  background-color: #1E88E5;
+}
+
+#edit-expense-btn {
+  background-color: #5c9ce4;
+  margin: 10px auto;
+  display: block;
+}
+#edit-expense-btn:hover {
+  background-color: #0091ff;
+}
+
+/* Expense List */
+#expense-list {
+  list-style-type: none;
+  padding: 0;
+  width: 100%;
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+#expense-list li {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  margin: 5px 0;
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+}
+
+#expense-list button {
+  background-color: #36cbf4;
+  margin-left: 10px;
+}
+
+#expense-list button:hover {
+  background-color: #3535e5;
+}
+
+/* Chart */
+canvas {
+  margin-top: 20px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Centering Buttons and Inputs in Forms */
+#register input,
+#login input,
+#register button,
+#login button,
+#register-msg,
+#login-msg {
+  display: block;
+  margin: 10px auto;
+  width: 80%;
+  max-width: 300px;
+}
+
+#register button,
+#login button {
+  width: calc(80% + 20px);
+  max-width: 320px;
+}
+
+#expense-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#expense-form input,
+#expense-form button {
+  width: 80%;
+  max-width: 300px;
+}
+
+#add-expense-btn,
+#edit-expense-btn {
+  width: calc(80% + 20px);
+  max-width: 320px;
+}

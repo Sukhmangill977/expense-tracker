@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Expense Tracker</title>
+    <link rel="stylesheet" href="./css/styles.css" />
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  </head>
+  <body>
+    <div id="auth-options" class="centered">
+      <button onclick="showRegister()">Register</button>
+      <button onclick="showLogin()">Login</button>
+    </div>
+
+    <div id="register" class="centered" style="display: none">
+      <h2>Register</h2>
+      <input
+        type="text"
+        id="register-username"
+        placeholder="Username"
+        required
+      />
+      <input
+        type="password"
+        id="register-password"
+        placeholder="Password"
+        required
+      />
+      <button onclick="register()">Register</button>
+      <p id="register-msg"></p>
+      <button onclick="showAuthOptions()">Back</button>
+    </div>
+
+    <div id="login" class="centered" style="display: none">
+      <h2>Login</h2>
+      <input type="text" id="login-username" placeholder="Username" required />
+      <input
+        type="password"
+        id="login-password"
+        placeholder="Password"
+        required
+      />
+      <button onclick="login()">Login</button>
+      <p id="login-msg"></p>
+      <button onclick="showAuthOptions()">Back</button>
+    </div>
+
+    <div id="tracker" class="centered" style="display: none">
+      <h2>Add Expense</h2>
+      <form id="expense-form">
+        <input
+          type="hidden"
+          id="expense-id"
+        />
+        <input
+          type="text"
+          id="expense-name"
+          placeholder="Expense Name"
+          required
+        />
+        <input
+          type="text"
+          id="expense-category"
+          placeholder="Category"
+          required
+        />
+        <input type="date" id="expense-date" required />
+        <input type="number" id="expense-amount" placeholder="Amount" required />
+        <button type="button" id="add-expense-btn" onclick="addExpense()">Add Expense</button>
+        <button type="button" id="edit-expense-btn" onclick="editExpense()" style="display:none">Update Expense</button>
+      </form>
+      <h3>Expense List</h3>
+      <ul id="expense-list"></ul>
+      <h3>Expense Chart</h3>
+      <canvas id="expense-chart" width="400" height="400"></canvas>
+    </div>
+
+    <script src="./js/app.js"></script>
+  </body>
+</html>
